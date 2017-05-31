@@ -1,0 +1,71 @@
+set nocompatible
+filetype off
+filetype plugin indent on
+syntax on
+
+set ignorecase
+set smartcase
+set smarttab
+set cindent
+set incsearch
+set nostartofline
+set nocp
+set nowrap
+set laststatus=2
+set cf
+set diffopt+=iwhite
+set wildmenu
+set wildmode=list:longest
+set hidden
+set backspace=indent,eol,start
+let loaded_matchparen=1
+set tabpagemax=25
+set scrolloff=3
+set timeout timeoutlen=1000 ttimeoutlen=50
+
+nnoremap ' `
+nnoremap ` '
+noremap - <PageDown>
+noremap = <PageUp>
+
+":imap <C-l> <ESC>
+:imap jk <ESC>
+
+" easy window navigation
+nnoremap <a-l> <c-w>l
+nnoremap <a-j> <c-w>j
+nnoremap <a-h> <c-w>h
+nnoremap <a-k> <c-w>k
+nnoremap <c-h> gT
+nnoremap <c-l> gt
+"nnoremap <c-s-tab> gT
+"nnoremap <c-tab> gt
+
+inoremap <C-e> <Esc>A
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+nnoremap Y y$
+noremap <space>y "*y
+noremap <space>Y "*Y
+noremap <space>p "*p
+noremap <space>P "*P
+
+let mapleader = "  "
+nmap <leader>d :action GotoDeclaration<cr>
+nmap <leader>f :action GotoFile<cr>
+nmap <leader>c :action GotoClass<cr>
+nmap <leader>s :action GotoSymbol<cr>
+nmap <leader>fs :action FileStructurePopup<cr>
+nmap <leader>e :action ShowErrorDescription<cr>
+
+" built-in navigation to navigated items works better
+nnoremap <c-o> :action Back<cr>
+nnoremap <c-i> :action Forward<cr>
+" but preserve ideavim defaults
+nnoremap g<c-o> <c-o>
+nnoremap g<c-i> <c-i>
+
+" built in search looks better
+nnoremap g/ :action Find<cr>
+" but preserve ideavim search
+"nnoremap g/ /

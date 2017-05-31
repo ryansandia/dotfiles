@@ -1,0 +1,4 @@
+vim/bundle
+ddd/history
+ddd/log
+*.pyc
