@@ -27,7 +27,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git-flow command-not-found compleat history-substring-search pip python fasd zsh-syntax-highlighting jsontools osx redis-cli docker mvn)
+plugins=(git-flow command-not-found compleat history-substring-search pip python fasd zsh-syntax-highlighting jsontools redis-cli docker mvn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -65,7 +65,7 @@ select-word-style shell
 # automatic upgrade...
 DISABLE_UPDATE_PROMPT=true
 
-alias ls='gls --group-directories-first --color=auto'
+alias ls='ls --group-directories-first --color=auto'
 alias la='ls -al'
 alias ll='ls -l'
 alias dc='cd'
@@ -89,7 +89,7 @@ export TERM=xterm-256color
 [ -n "$TMUX" ] && export TERM=screen-256color
 
 if [ -f ~/.dircolors ]; then
-    eval `gdircolors ~/.dircolors`
+    eval `dircolors ~/.dircolors`
 fi
 
 export EDITOR=vim
