@@ -17,17 +17,19 @@
 	unstage = reset HEAD --
 	visual = gitk
 	last = log -1 HEAD
-    fshow = ! sh -c 'git show --pretty="format:" --name-only $1 | grep -v "^$" | uniq | sed -e "s#^#`git rev-parse --show-toplevel`/#"' -
-    vi   = ! sh -c 'vim -p `git fshow $1`' -
-    edit  = ! sh -c '$EDITOR `git fshow $1`' -
+  fshow = ! sh -c 'git show --pretty="format:" --name-only $1 | grep -v "^$" | uniq | sed -e "s#^#`git rev-parse --show-toplevel`/#"' -
+  vi   = ! sh -c 'vim -p `git fshow $1`' -
+  edit  = ! sh -c '$EDITOR `git fshow $1`' -
 	todo = grep --heading --break --ignore-case -e ' FIX: *' -e ' TODO: *'
-    snapshot = !git stash save \"snapshot: $(date)\" && git stash apply \"stash@{0}\"
-    ours   = "!f() { git checkout --ours $@ && git add $@; }; f"
-    theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
+  snapshot = !git stash save \"snapshot: $(date)\" && git stash apply \"stash@{0}\"
+  ours   = "!f() { git checkout --ours $@ && git add $@; }; f"
+  theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	up = pull --rebase --autostash
 [push]
 	default = current
+[pull]
+	rebase = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
