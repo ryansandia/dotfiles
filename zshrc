@@ -27,7 +27,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git-flow command-not-found compleat history-substring-search pip python fasd zsh-syntax-highlighting jsontools osx docker mvn gradle aws)
+plugins=(git-flow command-not-found compleat history-substring-search pip python fasd zsh-syntax-highlighting jsontools osx docker gradle aws redis-cli)
 
 source $ZSH/oh-my-zsh.sh
 
