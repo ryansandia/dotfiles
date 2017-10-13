@@ -1,0 +1,28 @@
+Host dev4
+  HostName dev4.sandiacap.com
+  User ryan
+  IdentityFile ~/.ssh/aws
+  PreferredAuthentications publickey
+  ControlMaster auto
+  ControlPath /tmp/%r@%h:%p
+  ControlPersist 2h
+
+Host ftpmirror
+  HostName ec2-52-14-48-122.us-east-2.compute.amazonaws.com
+  User ubuntu
+  IdentityFile ~/.ssh/ryan_aws.pem
+
+Host morgan
+  HostName sftp.sandiacap.com
+  User msdrop
+  IdentityFile ~/.ssh/msdrop
+
+Host sandia-test01
+  HostName 172.16.6.195
+  User sandia
+  IdentityFile ~/.ssh/id_rsa
+
+Host sandia-test02
+  HostName 172.16.7.231
+  User sandia
+  IdentityFile ~/.ssh/id_rsa

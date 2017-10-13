@@ -96,3 +96,4 @@ export EDITOR=vim
 export CTEST_OUTPUT_ON_FAILURE=1
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
